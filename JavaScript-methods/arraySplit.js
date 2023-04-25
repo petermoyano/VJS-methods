@@ -13,34 +13,92 @@ contains one element consisting of the entire string.
 If separator is an empty string (""), str is converted to an array of each of its UTF-16 "characters".
 */
 class mySplit {
-    constructor(str) {
-        this.str = str;
+  constructor(
+    str
+  ) {
+    this.str =
+      str;
+  }
+  split(
+    separator
+  ) {
+    if (
+      !separator
+    ) {
+      return [
+        this
+          .str,
+      ];
     }
-    split(separator){
-        if(!separator){
-            return [this.str];
-        }
-        const splitStr = [];
-        let currentSplit = ""; 
-        for (let i = 0; i < this.str.length; i++) {
-            if(this.str[i] === separator){
-                splitStr.push(currentSplit);
-                currentSplit = "";
-                continue;
-            }
-            currentSplit += this.str[i];
-        }
-        splitStr.push(currentSplit);
+    const splitStr =
+      [];
+    let currentSplit =
+      "";
+    for (
+      let i = 0;
+      i <
+      this.str
+        .length;
+      i++
+    ) {
+      if (
+        this
+          .str[
+          i
+        ] ===
+        separator
+      ) {
+        splitStr.push(
+          currentSplit
+        );
+        currentSplit =
+          "";
+        continue;
+      }
+      currentSplit +=
+        this
+          .str[
+          i
+        ];
+    }
+    splitStr.push(
+      currentSplit
+    );
 
-        return splitStr;
-    }
+    return splitStr;
+  }
 }
 
-const str1 = new mySplit("peter");
-const str2 = new mySplit("Moyano");
-const str3 = new mySplit("abcabc123");
+const str1 =
+  new mySplit(
+    "peter"
+  );
+const str2 =
+  new mySplit(
+    "Moyano"
+  );
+const str3 =
+  new mySplit(
+    "abcabc123"
+  );
 
-console.log(str1.split("e"));
-console.log(str1.split("r"));
-console.log(str2.split("M"));
-console.log(str3.split("K"));
+console.log(
+  str1.split(
+    "e"
+  )
+);
+console.log(
+  str1.split(
+    "r"
+  )
+);
+console.log(
+  str2.split(
+    "M"
+  )
+);
+console.log(
+  str3.split(
+    "K"
+  )
+);
