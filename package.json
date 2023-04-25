@@ -1,12 +1,24 @@
 {
   "name": "vjs-methods",
   "version": "1.0.0",
-  "description": "",
   "main": "arraySplit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write './Interview-questions/**/*.js'"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petermoyano/VJS-methods.git"
+  },
+  "bugs": {
+    "url": "https://github.com/petermoyano/VJS-methods/issues"
+  },
+  "homepage": "https://github.com/petermoyano/VJS-methods#readme",
+  "description": "",
+  "dependencies": {
+    "prettier": "^2.8.8"
+  }
 }
