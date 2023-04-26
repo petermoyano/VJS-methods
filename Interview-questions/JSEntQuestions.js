@@ -1,5 +1,10 @@
 const questions = [
     {
+        "What are closures in JavaScript?":
+            "A closure is a function that has access to an outer enclosing funcion scope, even after the outer function has returned",
+        JavaScript: true,
+    },
+    {
         "Give an example of a HOF in JavaScript": "",
         JavaScript: true,
         Excercise: true,
