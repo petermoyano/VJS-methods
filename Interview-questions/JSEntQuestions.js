@@ -1,4 +1,16 @@
 const questions = [
+    {TypeScript: true,
+    "What are 3 class modifiyers and what do they do?": "Public(available everywhere), private (available inside the class only), and private (available for choldren classes also)"
+    },
+    {
+        "What are the 4 principles of OOP? Explain breefly each one.": 
+        "Inheretance (classes can use extends), encapsulation (hiding functionality, use closures or private class fields), Polymorphism (objects can take many forms, use method overloading [methods with same names but different arguments] or overriding [redefine a method coming from a parent class]) and abstraction (use abstract classes ignoring non-essential details)"
+    },
+    {
+        "What does response.json() does":
+            "Returns a promise that resolves to a JavaScript object. It parses the json text from the body of the response int  a JavaScript object",
+        JavaScript: true,
+    },
     {
         "What are closures in JavaScript?":
             "A closure is a function that has access to an outer enclosing funcion scope, even after the outer function has returned",
@@ -11,8 +23,19 @@ const questions = [
     },
     {
         "What is the Virtual Dom":
-            "Before react updates the DOM it will compare changes with the Virtual DOM and update only the differences.",
+            "Before react updates the DOM it will compare changes with the Virtual DOM and update only the differences. It is used to minimize changes that need to be made in the acutal DOM",
         React: true,
+    },
+    {
+        "How can you manipulate directly the HTML in React?":
+            "By using the useRef hook, which returns a mutable ref object, that you can use to reference a DOM element that persists across re-renders.",
+        React: true,
+    },
+    ,
+    {
+        React: true,
+        "Explain how the useRef hook is used.":
+            "You create your ref object by calling useRef, then you reference DOM element in your JSX and then change the current.innerHTML (for example) property of the ref object",
     },
     {
         "What is state?": "",
