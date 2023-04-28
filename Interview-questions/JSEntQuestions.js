@@ -1,10 +1,41 @@
 const questions = [
-    {TypeScript: true,
-    "What are 3 class modifiyers and what do they do?": "Public(available everywhere), private (available inside the class only), and private (available for choldren classes also)"
+    { "What is an implicit global variable": "", JavaScript: true },
+    { "What does 'use strict does in JavaScript?": "", JavaScript: true },
+    {
+        "Breefly explain how promises are made and handled.":
+            "They are created with the new keyword, and the callback when creating it recieves 2 parameters functions (rersolve and reject). When the promise is consumed, the first state is pending and then it can change to fullfilled or rejected. You then call .then (recieves data) and .catch (recieves error) on it, to execute a callback in each case. Whatever resolve returns will be available for .then, and same thing with reject() and .error",
+        JavaScript: true,
     },
     {
-        "What are the 4 principles of OOP? Explain breefly each one.": 
-        "Inheretance (classes can use extends), encapsulation (hiding functionality, use closures or private class fields), Polymorphism (objects can take many forms, use method overloading [methods with same names but different arguments] or overriding [redefine a method coming from a parent class]) and abstraction (use abstract classes ignoring non-essential details)"
+        "Name 2 key differences between var vs (let and const).":
+            "Variables declared with var get hoisted and are funciton scoped. With let and const they don't get hoisted and are block scoped",
+        Javascript: true,
+    },
+    {
+        "What are the 7 primitive data types in JavaScript?":
+            "string, number, boolean, null, undefined, BigInt, symbol",
+        JavaScript: true,
+    },
+    {
+        "Define scope in 2 words":
+            "Variable visibility or context of execution",
+    },
+    {
+        "What are the 5 falsy values of JavaScript":
+            "0, false, '', null, undefined, NaN",
+    },
+    {
+        "What are th 5 SOLID principles of OOP?": `Single responsibility(a class should do one thing only), Open-closed (open for extension and closed for modification, Liskov subsitution (subclasses should be subsituble for parent classes), Interface segregation(classes should not inherit methods or properties that they won't use), Dependency inversion (abstractions should not depend on details, but details should depend on abstracions)`,
+    },
+    {
+        TypeScript: true,
+        "What are 3 class modifiyers and what do they do?":
+            "Public(available everywhere), private (available inside the class only), and private (available for choldren classes also)",
+    },
+    {
+        JavaScript: true,
+        "What are the 4 principles of OOP? Explain breefly each one.":
+            "Inheretance (classes can use extends), encapsulation (hiding functionality, use closures or private class fields), Polymorphism (objects can take many forms, use method overloading [methods with same names but different arguments] or overriding [redefine a method coming from a parent class]) and abstraction (use abstract classes ignoring non-essential details)",
     },
     {
         "What does response.json() does":
@@ -17,7 +48,8 @@ const questions = [
         JavaScript: true,
     },
     {
-        "Give an example of a HOF in JavaScript": "",
+        "Give an example of a HOF in JavaScript":
+            "Array.map() and Array.filter()",
         JavaScript: true,
         Excercise: true,
     },

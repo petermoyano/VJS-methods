@@ -1,0 +1,74 @@
+{
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.formatOnSave": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "blockman.n01LineHeight": 0,
+    "workbench.colorCustomizations": {
+    
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f",
+        "editor.background": "#000000"
+    },
+    "editor.wordWrap": "on",
+    "diffEditor.wordWrap": "on",
+    "editor.guides.indentation": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlayHints.enabled": false,
+    "blockman.n04ColorComboPreset": "Pale Pink (Solid colors)",
+    "blockman.n33A01B1FromDepth0ToInwardForAllBorders": "10,0,0,0; none",
+    "blockman.n03MaxDepth": 1,
+    "editor.minimap.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.accessibilitySupport": "off",
+    "explorer.confirmDelete": false,
+    "eslint.format.enable": true,
+    "totalTypeScript.hiddenTips": [
+        "basic-types",
+        "interface-declaration",
+        "ts-object-type",
+        "type-alias-declaration",
+        "array-type",
+        "function-return-type",
+        "typing-function-parameters",
+        "variable-type-annotation",
+        "passing-generics-to-types"
+    ],
+    "totalTypeScript.hideAllTips": false,
+    "totalTypeScript.hideBasicTips": false,
+    "window.zoomLevel": 2,
+    "terminal.integrated.env.windows": {},
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "workbench.colorTheme": "Night Wolf (black)",
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+    "editor.fontFamily": "Fira Code, Helvetica, Consolas, 'Courier New' ",
+    "terminal.integrated.fontFamily": "'Fira Code', Consolas",
+    "editor.indentSize": "tabSize",
+    "thunder-client.indentSize": 4,
+    "editor.detectIndentation": false,
+    "[yaml]": {
+        "editor.tabSize": 4
+    },
+    "[dockercompose]": {
+        "editor.tabSize": 4
+    },
+    "prettier.tabWidth": 4,
+    "errorLens.excludeBySource": ["json(0)"],
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "explorer.confirmDragAndDrop": false
+}
