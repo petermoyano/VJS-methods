@@ -5,6 +5,7 @@ const questions = [
         "Breefly explain how promises are made and handled.":
             "They are created with the new keyword, and the callback when creating it recieves 2 parameters functions (rersolve and reject). When the promise is consumed, the first state is pending and then it can change to fullfilled or rejected. You then call .then (recieves data) and .catch (recieves error) on it, to execute a callback in each case. Whatever resolve returns will be available for .then, and same thing with reject() and .error",
         JavaScript: true,
+        llaskdm,
     },
     {
         "Name 2 key differences between var vs (let and const).":
