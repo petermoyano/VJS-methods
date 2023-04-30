@@ -1,6 +1,20 @@
 const questions = [
-    { "What is an implicit global variable": "", JavaScript: true },
-    { "What does 'use strict does in JavaScript?": "", JavaScript: true },
+    { JavaScript: true, "What does the new keyword does?": "" },
+    {
+        JavaScript: true,
+        "What is the difference between .bind(), .call() and .apply() methods when using the this keyword?":
+            ".bind() creates a ne function that has a permanent value of this. Apply and call both call the function with the specified value of this but it's a one time thing. Apply accepts an array of arguments while .call accepts them individually. The value of this is defined uppon function execution!",
+    },
+    {
+        "What is an implicit global variable":
+            "When you skip var, let or const (by mistake) your variable is in the global scope",
+        JavaScript: true,
+    },
+    {
+        "What does 'use strict does in JavaScript?":
+            "Makes some simple mistakes an error: Accessing a variable before definition, accessing a property in an object that does not exist, this is undefined unless explicitly defined",
+        JavaScript: true,
+    },
     {
         "Breefly explain how promises are made and handled.":
             "They are created with the new keyword, and the callback when creating it recieves 2 parameters functions (rersolve and reject). When the promise is consumed, the first state is pending and then it can change to fullfilled or rejected. You then call .then (recieves data) and .catch (recieves error) on it, to execute a callback in each case. Whatever resolve returns will be available for .then, and same thing with reject() and .error",
