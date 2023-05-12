@@ -1,4 +1,13 @@
 const questions = [
+    {
+        CSS: true,
+        "What is the difference between inline and inline-block?": "",
+    },
+    {
+        CSS: true,
+        "What are the possible values of the display property?":
+            "block (respects width and height), inline (ignores width and height), inline-block (side-by-side and respects width and height, none, flex, inline-flex, grid, inline-grid, table, and many many more",
+    },
     { JavaScript: true, "What does the new keyword does?": "" },
     {
         JavaScript: true,
