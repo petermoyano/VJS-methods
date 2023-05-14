@@ -42,13 +42,13 @@ function giveNames(arr) {
     }
     return names;
 }
-console.log(
-    giveNames([
-        { name: "Peter" },
-        { name: "Sofi", age: 2 },
-        { family: "Moians" },
-    ])
-);
+// console.log(
+//     giveNames([
+//         { name: "Peter" },
+//         { name: "Sofi", age: 2 },
+//         { family: "Moians" },
+//     ])
+// );
 
 //Write a function that prints to the console an n amount of integers with a delay of 1 second between each integer
 function printNumbers(n) {
@@ -79,4 +79,32 @@ function revWords(sentence) {
     }
     return reverseWords.join(" ");
 }
-console.log(revWords("Welcome to this Javascript Guide!"));
+// console.log(revWords("Welcome to this Javascript Guide!"));
+
+//Write a function that returns a promise that resolves in 3s
+function usePromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random >= 0.5) {
+                resolve(console.log("Promise resolved!"));
+            } else
+                reject((error) => {
+                    console.log("error!", error);
+                });
+        }, 1000);
+    });
+}
+function consumePromise() {
+    const newPromise = usePromise();
+    newPromise
+        .then((data) => console.log(data))
+        .then(console.log("this too!! more data"))
+        .catch(console.error("Error!!!!, "));
+}
+
+//Write a function that takes an array of numbers and returns the index of the largest number
+try {
+    consumePromise();
+} catch (error) {
+    console.log("Error from try catch!!", error);
+}
