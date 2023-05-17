@@ -83,28 +83,61 @@ function revWords(sentence) {
 
 //Write a function that returns a promise that resolves in 3s
 function usePromise() {
+    const data = [
+        { id: 1, name: "Jack", isActive: true },
+        { id: 2, name: "Katie", isActive: true },
+        { id: 3, name: "Peter", isActive: true },
+    ];
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (Math.random >= 0.5) {
-                resolve(console.log("Promise resolved!"));
-            } else
-                reject((error) => {
+                return reject((error) => {
                     console.log("error!", error);
                 });
-        }, 1000);
+            }
+            resolve({ data });
+        }, 3000);
     });
 }
-function consumePromise() {
-    const newPromise = usePromise();
-    newPromise
-        .then((data) => console.log(data))
-        .then(console.log("this too!! more data"))
-        .catch(console.error("Error!!!!, "));
-}
+//consumes the promise
+function consumePromise() {}
+
+// try {
+//     const newPromise = usePromise();
+//     newPromise
+//         .then((data) => {
+//             console.log("returning data!");
+//             return data;
+//         })
+//         .catch((error) => {
+//             return error;
+//         });
+//     const result = consumePromise();
+//     console.log(newPromise);
+// } catch (error) {
+//     console.log("Error from try catch!!", error);
+// }
 
 //Write a function that takes an array of numbers and returns the index of the largest number
-try {
-    consumePromise();
-} catch (error) {
-    console.log("Error from try catch!!", error);
-}
+
+// Write a function that accepts a string as an argument
+// The function should capitalize only every other letter in the string
+
+// The function should then return the converted string
+
+// "" => ""
+console.log("This is my test");
+const CapitalizeEveryOther = (string) => {
+    const stringConstructor = [];
+    for (let letter of string) {
+        if (letter.indexOf % 2 === 0) {
+            stringConstructor.push(letter.toUpperCase());
+        } else {
+            stringConstructor.push(letter.toLowerCase());
+        }
+    }
+    return stringConstructor.join("");
+};
+console.log(CapitalizeEveryOther("hello"));
+console.log(CapitalizeEveryOther("yo eli"));
+console.log(CapitalizeEveryOther("hello??"));
