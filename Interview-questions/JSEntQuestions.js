@@ -1,5 +1,15 @@
 const questions = [
     {
+        "What are the 3 parts of a JWT?":
+            "header, payload and signature. They are not encrypted! Everyone can see the content of the payload.",
+        React: true,
+    },
+    {
+        React: true,
+        "Can you explain the 4 steps for an app to use JWT?":
+            "1- The react app asks for the JWT, 2- The auth server provides it, 3- The app stores the JWT and re sends it with all requests, 4- The back end app verifies the JWT using the public key",
+    },
+    {
         CSS: true,
         "What is the difference between inline and inline-block?": "",
     },
