@@ -126,18 +126,18 @@ function consumePromise() {}
 // The function should then return the converted string
 
 // "" => ""
-console.log("This is my test");
+// console.log("This is my test");
 const CapitalizeEveryOther = (string) => {
     const stringConstructor = [];
-    for (let letter of string) {
-        if (letter.indexOf % 2 === 0) {
-            stringConstructor.push(letter.toUpperCase());
+    for (let i = 0; i <= string.length - 1; i++) {
+        if (string.indexOf(string[i], i) % 2 === 0) {
+            stringConstructor.push(string[i].toUpperCase());
         } else {
-            stringConstructor.push(letter.toLowerCase());
+            stringConstructor.push(string[i].toLowerCase());
         }
     }
     return stringConstructor.join("");
 };
 console.log(CapitalizeEveryOther("hello"));
 console.log(CapitalizeEveryOther("yo eli"));
-console.log(CapitalizeEveryOther("hello??"));
+console.log(CapitalizeEveryOther("Hello??"));
