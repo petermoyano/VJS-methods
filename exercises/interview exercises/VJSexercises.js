@@ -138,6 +138,64 @@ const CapitalizeEveryOther = (string) => {
     }
     return stringConstructor.join("");
 };
-console.log(CapitalizeEveryOther("hello"));
-console.log(CapitalizeEveryOther("yo eli"));
-console.log(CapitalizeEveryOther("Hello??"));
+// console.log(CapitalizeEveryOther("hello"));
+// console.log(CapitalizeEveryOther("yo eli"));
+// console.log(CapitalizeEveryOther("Hello??"));
+
+// 1. Write code to get an array of names grom a given array of users
+// 2. Get back only active users
+// 3. Sort users by age ascending   ====>    ["John", "Jack"]
+
+const users = [
+    {
+        id: 1,
+        name: "Jack",
+        isActive: true,
+        age: 20,
+    },
+    {
+        id: 2,
+        name: "John",
+        isActive: true,
+        age: 18,
+    },
+    {
+        id: 3,
+        name: "Mike",
+        isActive: false,
+        age: 30,
+    },
+];
+
+// function getNames(names) {
+//     const activeUsers = [];
+//     const result = [];
+//     for (const name of names) {
+//         if (name.isActive) {
+//             activeUsers.push(name);
+//         }
+//     }
+//     const SortedNamesArray = activeUsers.sort((a, b) => {
+//         return b.age - a.age;
+//     });
+//     for (let sortedNameObject of SortedNamesArray) {
+//         result.push(sortedNameObject.name);
+//     }
+//     return result;
+// }
+// console.log(getNames(users));
+
+// const names = users
+//     .sort((user1, user2) => (user1.age > user2.age ? 1 : -1))
+//     .filter((user) => user.isActive)
+//     .map((user) => user.name);
+
+// console.log(names);
+
+let var1;
+console.log(var1); //undefined
+console.log(typeof var1); //undefined
+
+let var2 = null;
+console.log(var2); //null
+console.log(typeof null); //'object'

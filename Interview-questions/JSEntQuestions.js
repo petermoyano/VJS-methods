@@ -1,5 +1,10 @@
 const questions = [
     {
+        CSS: true,
+        "Name 2 examples of pesudo-classes and pseudo-elements":
+            ":hover and :focus. ::before, ::after and ::first-line",
+    },
+    {
         "What are the 3 parts of a JWT?":
             "header, payload and signature. They are not encrypted! Everyone can see the content of the payload.",
         React: true,
