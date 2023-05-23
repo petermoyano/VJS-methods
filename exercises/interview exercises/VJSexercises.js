@@ -192,10 +192,10 @@ const users = [
 
 // console.log(names);
 
-let var1;
-console.log(var1); //undefined
-console.log(typeof var1); //undefined
+// let var1;
+// console.log(var1); //undefined
+// console.log(typeof var1); //undefined
 
-let var2 = null;
-console.log(var2); //null
-console.log(typeof null); //'object'
+// let var2 = null;
+// console.log(var2); //null
+// console.log(typeof null); //'object'
