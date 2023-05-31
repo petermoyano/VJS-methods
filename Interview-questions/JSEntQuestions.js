@@ -1,6 +1,16 @@
 const questions = [
     {
         CSS: true,
+        "What are the 5 possible states of the position property?":
+            "static (default), relative, absolute, fixed (you always see it), sticky (mix between absolute and fixed)",
+    },
+    {
+        React: true,
+        "What is the purpose of the npm manager. Why do we need it?":
+            "It's used to install and manage dependencies, like React or Next",
+    },
+    {
+        CSS: true,
         "Name 2 examples of pesudo-classes and pseudo-elements":
             ":hover and :focus. ::before, ::after and ::first-line",
     },
@@ -21,7 +31,7 @@ const questions = [
     {
         CSS: true,
         "What are the possible values of the display property?":
-            "block (respects width and height), inline (ignores width and height), inline-block (side-by-side and respects width and height, none, flex, inline-flex, grid, inline-grid, table, and many many more",
+            "block (respects width and height), inline (ignores width and height), inline-block (side-by-side and respects width and height), none, flex, inline-flex, grid, inline-grid, table, and many many more",
     },
     { JavaScript: true, "What does the new keyword does?": "" },
     {
@@ -43,7 +53,6 @@ const questions = [
         "Breefly explain how promises are made and handled.":
             "They are created with the new keyword, and the callback when creating it recieves 2 parameters functions (rersolve and reject). When the promise is consumed, the first state is pending and then it can change to fullfilled or rejected. You then call .then (recieves data) and .catch (recieves error) on it, to execute a callback in each case. Whatever resolve returns will be available for .then, and same thing with reject() and .error",
         JavaScript: true,
-        llaskdm,
     },
     {
         "Name 2 key differences between var vs (let and const).":
