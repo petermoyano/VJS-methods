@@ -111,7 +111,6 @@ const questions = [
             "By using the useRef hook, which returns a mutable ref object, that you can use to reference a DOM element that persists across re-renders.",
         React: true,
     },
-    ,
     {
         React: true,
         "Explain how the useRef hook is used.":
@@ -181,4 +180,4 @@ const questions = [
     },
 ];
 
-console.log(questions.length);
+module.exports = questions;
