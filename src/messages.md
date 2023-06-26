@@ -20,3 +20,4 @@ Achievments:
 *   code reviews =>
 *   assiste fellow developers =>
 *   courses target
+*   improve app performance => -Using Promise.all to fetch data all at the same time instead of waiting for each promise to resolve before making the next request.
