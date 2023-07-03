@@ -81,27 +81,6 @@ function revWords(sentence) {
 }
 // console.log(revWords("Welcome to this Javascript Guide!"));
 
-//Write a function that returns a promise that resolves in 3s
-function usePromise() {
-    const data = [
-        { id: 1, name: "Jack", isActive: true },
-        { id: 2, name: "Katie", isActive: true },
-        { id: 3, name: "Peter", isActive: true },
-    ];
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (Math.random >= 0.5) {
-                return reject((error) => {
-                    console.log("error!", error);
-                });
-            }
-            resolve({ data });
-        }, 3000);
-    });
-}
-//consumes the promise
-function consumePromise() {}
-
 // try {
 //     const newPromise = usePromise();
 //     newPromise
