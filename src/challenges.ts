@@ -1,6 +1,7 @@
 const DailyGoals = {
     "6/30": "Apply to 5 jobs. Complete 1 6 Kyu JavaScript challenge. Deploy BE note taking app somewhere.",
-    "7/3": "Make gols and complete one 6 kyu JavaScript challenge.",
+    "7/3": "Create, weekly and monthly goals. Make gols and complete one 6 kyu JavaScript challenge. Change responsabilities for achievements in resume.",
+    "7/4": "Review the entire express section of the Springboard curriculum",
 };
 
 const proyects = {
