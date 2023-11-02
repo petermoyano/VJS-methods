@@ -52,8 +52,13 @@ function getNames4(users) {
 function getNames5(users) {
   return users.sort((a, b) => a.age - b.age);
 }
+
+function getNames6(users) {
+  return users.sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
+}
 console.log(getNames1(users));
 console.log(getNames2(users));
 console.log(getNames3(users));
 console.log(getNames4(users));
 console.log(getNames5(users));
+console.log(getNames6(users));
