@@ -17,6 +17,8 @@ let arr1Filter = arr3Copy.filter((e) => {
   if (arr3Copy.indexOf(e) === 1) return false;
   return true
 })
+console.log(Math.ceil(Math.random() * 10));
+console.log(Number.MAX_VALUE > Number.POSITIVE_INFINITY)
 
 
 console.log(arr1 === arr1Copy)
