@@ -1,6 +1,6 @@
 // write code to get array of names from given array of users
 // get Back only active users
-// sort users by age descending 
+// sort users by age descending
 
 const users = [
   {
@@ -56,9 +56,23 @@ function getNames5(users) {
 function getNames6(users) {
   return users.sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
 }
-console.log(getNames1(users));
-console.log(getNames2(users));
-console.log(getNames3(users));
-console.log(getNames4(users));
-console.log(getNames5(users));
-console.log(getNames6(users));
+// console.log(getNames1(users));
+// console.log(getNames2(users));
+// console.log(getNames3(users));
+// console.log(getNames4(users));
+// console.log(getNames5(users));
+// console.log(getNames6(users));
+
+function getNames7(users) {
+	return users.map(user => user.name)
+}
+
+const getNames8 = (users) => {
+	const names = []
+	for (let i = 0; i < users.length; i++) {
+		names.push(users[i].name);
+	}
+	return names;
+}
+
+console.log(getNames8(users));
