@@ -16,15 +16,18 @@ Sub SendAppointmentEmails()
     xlApp.Visible = False  ' Set to True if you want to see Excel
 
     ' Open the Excel workbook with your data
-    Set xlWorkbook = xlApp.Workbooks.Open("P:\REGISTRO CIVIL\TURNOS SCRIPT.xlsx")  ' path to Excel file.
+    Set xlWorkbook = xlApp.Workbooks.Open("P:\. REGISTRO CIVIL\.TURNOS LMD\TURNOS SCRIPT.xlsx")  ' path to Excel file.
     Set xlSheet = xlWorkbook.Sheets(1)  ' Assumes data is in the first sheet
 
     ' Find the last row with data
     lastRow = xlSheet.Cells(xlSheet.Rows.Count, "A").End(-4162).Row
 
     ' Loop through each row (assuming data starts at row 1)
-    For i = 1 To 5 'change 5 to lastRow after testing
-        fullEntry = xlSheet.Cells(i, 4).Value ' Column D contains the full entry "Name <Email>"
+    For i = 5 To lastRow
+        fullEntry = xlSheet.Cells(i, 6).Value ' Column D contains the full entry "Name <Email>"
+        appointmentDate = xlSheet.Cells(i, 1).Value ' Date is in column A
+        appointmentTime = xlSheet.Cells(i, 2).Value ' Time is in column B
+        formattedTime = Format(appointmentTime, "hh:mm") ' Format time to "hh:mm
         ' Check for empty rows before attempting to extract email
         If Not IsEmpty(fullEntry) Then
             emailStart = InStr(fullEntry, "<")
@@ -35,9 +38,12 @@ Sub SendAppointmentEmails()
                 recipientName = Trim(Left(fullEntry, emailStart - 1))
 
                  ' Prepare and send email using a template
-                Set mailItem = Application.CreateItemFromTemplate("C:\Path to template")
-                mailItem.To = "pedromoyano454@gmail.com"  ' Change as necessary
-                mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{name}", recipientName)
+                Set mailItem = Application.CreateItemFromTemplate("P:\. REGISTRO CIVIL\.TURNOS LMD\TEMPLATE TURNOS SCRIPT.oft")
+                mailItem.SendUsingAccount = "cog.mendoza.lmd@maec.es"
+                mailItem.To = recipientEmail
+                mailItem.Subject = "Citas LMD"
+                mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{date}", appointmentDate)
+                mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{time}", formattedTime)
                 mailItem.Send
             End If
         End If
