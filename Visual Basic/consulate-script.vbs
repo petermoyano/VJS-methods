@@ -15,6 +15,7 @@ Sub SendAppointmentEmails()
     Dim appointmentDate As String
     Dim appointmentTime As Variant
     Dim formattedTime As String
+    Dim name As String
 
     ' Initialize Excel application
     Set xlApp = CreateObject("Excel.Application")
@@ -42,7 +43,7 @@ Sub SendAppointmentEmails()
         appointmentDate = xlSheet.Cells(i, 1).Value ' Date is in column A
         appointmentTime = xlSheet.Cells(i, 2).Value ' Time is in column B
         formattedTime = Format(appointmentTime, "hh:mm") ' Format time to "hh:mm"
-
+        name = xlSheet.Cells(i, 4).Value ' Name is in column D
         ' Check for empty rows before attempting to extract email
         If Not IsEmpty(fullEntry) Then
             emailStart = InStr(fullEntry, "<")
@@ -59,6 +60,7 @@ Sub SendAppointmentEmails()
                 mailItem.Subject = "Citas LMD"
                 mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{date}", appointmentDate)
                 mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{time}", formattedTime)
+                mailItem.HTMLBody = Replace(mailItem.HTMLBody, "{name}", name)
                 mailItem.Send
             End If
         End If
